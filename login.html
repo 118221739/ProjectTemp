@@ -7,7 +7,7 @@
   <meta name="author" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" type="text/css" href="main.css">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,32 +17,46 @@
 <div class="container">
 <div>
 <br>
- <form action="action_page.php">
 
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-     <br>
-	 <br>
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form> 
 </div>
 </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/script.js"></script>
+  
+  <div id="wrapper">
+
+	<form name="login-form" class="login-form" action="" method="post">
+	
+		<div class="header">
+		<h1>Login Form</h1>
+		<span>Fill out the form below to login to my super awesome imaginary control panel.</span>
+		</div>
+	
+		<div class="content">
+		<input name="username" type="text" class="input username"  id="username" placeholder="Username" />
+		<div class="user-icon"></div>
+		<input name="password" type="password" class="input password" id= "password" placeholder="Password" />
+		<div class="pass-icon"></div>		
+		</div>
+
+		<div class="footer">
+		<input type="submit" name="submit" value="Login"  onclick="myfunc()"  class="button" />
+		<input type="submit" name="submit" onclick="myfunc()" value="Register" class="register" />
+		</div>
+	
+	</form>
+
+</div>
+<div class="gradient"></div>
+<script type="text/javascript">
+ function myfunc(){
+
+   var username=document.getElementById("username").value;
+   var password =document.getElementById("password");
+     alert("welcome "+username);
+	}
+</script>
 </body>
 
 </html>
